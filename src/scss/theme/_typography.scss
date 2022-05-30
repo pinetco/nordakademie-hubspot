@@ -1,0 +1,53 @@
+    h1,h2,h3,h4,h5,h6{
+    @apply tracking-wide mb-4 font-normal text-blue;
+    line-height:1.2;
+    }
+
+    h1{
+    font-size: 1.5rem;
+        @screen lg{
+            font-size: 2.25rem;
+        }
+    }
+
+    h2 {
+    font-size : 1.35rem;
+        @screen lg {
+            font-size:1.875rem;
+        }
+    }
+
+    h3{
+    font-size: 1.25rem;
+        @screen lg{
+            font-size: 1.60rem;
+        }
+    }
+
+    h4, .h4{
+    font-size:18px;
+    }
+
+    b{
+    @apply font-medium;
+    }
+
+    .richtext, #hs_cos_wrapper_post_body{
+    >*{
+        @apply mb-0;
+    }
+    > *:not(:first-child){
+        @apply mt-4;
+    }
+
+    ol{
+        list-style: decimal;
+        padding-left: 20px;
+        li{
+        padding-left: 10px;
+        &:not(:last-child){
+            @apply mb-4;
+        }
+        }
+    }
+}

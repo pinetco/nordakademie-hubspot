@@ -1,24 +1,22 @@
 module.exports = {
-  // mode: 'jit',
-  // purge:[
-  //     './test-theme-from-theme-builder/modules/**/*.html',
-  //   './test-theme-from-theme-builder/modules/**/*.js',
-  // ],
+  purge: [],
+  darkMode : false,
   theme: {
+    container: {
+      padding: '20px',
+      center : true
+    },
     extend: {},
       colors:{
-        primary: '#034A7F',
-        secondary: '#0086C7',
-        gray: {
-          DEFAULT : '#DEE1E8',
-          light : '#F6F7F9',
-          dark : '#6C7893',
-          cool : '#3c3c3c',
-          medium : '#CACAC9',
-        },
-        white: '#FFFFFF',
-        black: '#000000',
-        transparent: 'transparent'
+        'blue' : '#003A79',
+        'cyan' : '#3CD2FF',
+        'silver' : '#E6E1DC',
+        'peach' : '#FFA064',
+        'navy' : '#0F192D',
+        'silver-light': '#F8F7F6',
+        'white' : '#FFFFFF',
+        'black' : '#000000',
+        'transparent' : 'transparent'
       }
     },
   variants: {

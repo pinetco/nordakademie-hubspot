@@ -1,163 +1,209 @@
+@import "../config/mixins";
+
 .form-title{
-    @apply hidden;
+  @apply hidden;
+}
+.form-white{
+  .hs-button{
+    @apply bg-white text-blue;
   }
-  .hs-form{
-    fieldset{
-      max-width:auto!important;
-      max-width:unset!important;
-      margin-left: -.75rem!important;
-      margin-right: -.75rem!important;
-      .input{
-        margin-right: 0!important;
-      }
-      .hs-input{
-        width: 100%!important;
-      }
-    }
-    .hs-form-field{
-      @apply mb-6;
-      label{
-        @apply text-base mb-1 mt-2;
-      }
-      &:not(.hs-fieldtype-select):not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio){
-        > label{
-          line-height: 20px !important;
-          margin-bottom: 6px;
-          @apply text-base;
-        }
-      }
-    }
-   .form-columns-2, .form-columns-3{
-     .hs-form-field{
-       @apply flex flex-col;
-       @media(max-width:767px){
-         width:100%!important;
-       }
-       > *{
-         @apply w-full;
-       }
-       .hs-field-desc{
-         order: 1;
-       }
-       .hs-error-msgs{
-         order: 2;
-       }
-     }
-   }
-    .form-columns-3{
-      .hs-form-field{
-        @screen md{
-          width:33.33%!important;
-        }
-      }
-    }
-    .input .inputs-list{
-      display: block;
-      margin-bottom: 20px;
-    }
-    .inputs-list.multi-container li{
-      @apply my-1;
-    }
-    .hs-field-desc{
-      @apply mb-1 mt-0.5;
-    }
-    .hs-form-checkbox{
-        .hs-form-checkbox-display{
-            @apply flex items-center;
-            input{
-                width: 20px;
-                height: 20px;
-                margin-right:10px;
-            } 
-            span{
-                display: block;
-            }
-        }
-    }
-    .input .inputs-list{
-      .hs-form-radio{
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-    }
-  
-     .hs-form-radio-display{
-       input + span{
-         line-height: 1.45;
-       }
-     }
-    .hs-form-booleancheckbox-display{
-      @apply flex items-center;
-    .hs-input{
-        @apply block;
-        + {
-          span{
-            @apply block text-sm;
-          }
-        }
-      }
-    }
-    .legal-consent-container{
-      @apply mt-2 text-primary;
-      >div{
-        @apply mb-4;
-      }
-      .hs-form-field{
-        padding-left: 0!important;
-        padding-right: 0!important;
-      }
-    }
-    .hs-error-msgs{
-      @apply text-xs font-light;
-      color:red;
-    }
-    .hs-richtext, .legal-consent-container{
-      @apply text-xs;
-    }
-    .hs-richtext{
-      @apply mb-4;
-      a{
-        &:hover{
-          @apply underline;
-        }
-      }
-    }
-    .actions{
-      @apply mt-1;
-    }
+  .hs-input{
+    @apply bg-blue text-center placeholder-white;
+    border-width: 2px !important;
+    border-color: white !important;
   }
-  
-  .hs_error_rollup{
-    @apply mb-1;
+  .hs-form .hs-form-booleancheckbox-display input+span:before, .hs-form .hs-form-booleancheckbox-display input+span:after{
+    border-color: white;
   }
-  
+  .hs-form .hs-form-booleancheckbox-display input+span:after{
+    background-color:white;
+  }
+  .hs-richtext{
+    color: white;
+  }
+  .hs-form-booleancheckbox{
+    color: white;
+  }
+  .hs-form .hs-error-msgs{
+    color: #E50030;
+    font-weight: lighter;
+  }
   input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), select{
-    height:50px;
-    @apply py-2 px-4 w-full;
     &.invalid{
       border-color:red;
     }
+    &:focus{
+      @apply border-white text-white;
+    }
   }
-  textarea{
-    height:50px;
-    @apply py-2 px-4 w-full;
-    min-height: 100px;
+}
+
+.hs-form{
+  fieldset{
+    max-width:auto!important;
+    max-width:unset!important;
+    margin-left: -.75rem!important;
+    margin-right: -.75rem!important;
+    .input{
+      margin-right: 0!important;
+    }
+    .hs-input{
+      width: 100%!important;
+    }
   }
-  
-   select{
-     appearance: none;
-     background-image: url('..');
-     background-repeat: no-repeat;
-     background-position:96%;
-     background-size: 14px;
-     padding-right: 3rem!important;
-     filter: grayscale(100);
-     &:focus{
-       filter: grayscale(0);
-       @apply border-primary text-primary;
-     }
-   }
-  
-  textarea{
-    @apply block;
+  .hs-form-field{
+    @apply mb-4 px-2;
+    label{
+      @apply text-sm mb-1 mt-2;
+    }
+    &:not(.hs-fieldtype-select):not(.hs-fieldtype-checkbox):not(.hs-fieldtype-radio){
+      > label{
+        @apply hidden;
+      }
+    }
   }
+  // .form-columns-2, .form-columns-3{
+  //   .hs-form-field{
+  //     @apply flex flex-col;
+  //     @media(max-width:767px){
+  //       width:100%!important;
+  //     }
+  //     > *{
+  //       @apply w-full;
+  //     }
+  //     .hs-field-desc{
+  //       order: 1;
+  //     }
+  //     .hs-error-msgs{
+  //       order: 2;
+  //     }
+  //   }
+  // }
+  .form-columns-3{
+    .hs-form-field{
+      @screen md{
+        width:33.33%!important;
+      }
+    }
+  }
+  .input .inputs-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    .hs-form-checkbox{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  .inputs-list.multi-container li{
+    @apply my-1;
+  }
+  .hs-field-desc{
+    @apply mb-1 mt-4;
+  }
+  .hs-form-checkbox-display{
+    @include checkbox();
+  }
+  .input .inputs-list{
+    .hs-form-radio{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .hs-form-radio-display{
+    @include checkbox($radio:true);
+    input + span{
+      line-height: 1.45;
+    }
+  }
+  .hs-form-booleancheckbox-display{
+    @include checkbox();
+  }
+  .hs-button{
+    min-width: 200px;
+    @apply cursor-pointer;
+  }
+  .legal-consent-container{
+    @apply px-3 mt-2;
+    color: $input-border-color;
+    >div{
+      @apply mb-4;
+    }
+    .hs-form-field{
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+  }
+  .hs-error-msgs{
+    @apply text-xs font-light;
+    color:red;
+  }
+  .hs-richtext, .legal-consent-container{
+    @apply text-xs;
+  }
+  .hs-richtext{
+    @apply mb-4;
+    a{
+      &:hover{
+        @apply underline;
+      }
+    }
+  }
+  .actions{
+    @apply mt-1;
+  }
+}
+
+.hs_error_rollup{
+  @apply mb-1;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), select{
+  @include input;
+  &.invalid{
+    border-color:red;
+  }
+  &:focus{
+    @apply border-blue text-blue;
+  }
+}
+textarea{
+  @include input;
+  min-height: 100px;
+  &:focus{
+    @apply border-blue text-blue;
+  }
+}
+
+select{
+  appearance: none;
+  // background-image: url('#{$icon-path}/down.png');
+  //background-position: right center;
+  background-repeat: no-repeat;
+  background-position:96%;
+  background-size: 14px;
+  padding-right: 3rem!important;
+  filter: grayscale(100);
+  &:focus{
+    filter: grayscale(0);
+    @apply border-blue text-blue;
+  }
+}
+
+textarea{
+  @apply block;
+}
+
+.custome-checkbox{
+  @include checkbox();
+  input[type=checkbox]{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    right:0;
+  }
+}

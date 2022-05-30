@@ -2,3 +2,5 @@
 /hubspot.config.yml
 /mix-manifest.json
 /yarn.lock
+/yarn-error.log
+/.idea

@@ -1,63 +1,46 @@
-body{
-    font-weight: normal;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Work Sans', sans-serif;
-}
-.container{
-    max-width: 1218px;
-    @apply mx-auto px-4 w-full;
-}
-h1,h2, h3, h4, h5, h6{
-    @apply mb-6;
-}
-h1{
-    @apply font-bold;
-    font-size: 32px;
-    @screen md{
-        font-size: 40px;
-    }
+:focus{
+    outline: 0 none;
+  }
+  .section-gap{
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
     @screen lg{
-        font-size: 56px;
-        line-height: 60px;
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
     }
-}
-h2{
-    @apply font-semibold;
-    line-height: 35px;
-    font-size: 27px;
-    @screen md{
-        font-size: 30px;
-    }
-}
-h4{
-    @apply font-medium;
-    font-size: 20px;
-    line-height: 28px;
-    @screen md{
-        font-size: 24px;
-    }
-}
-h5{
-    @apply font-medium;
-    line-height: 23px;
-    font-size: 18px;
-    @screen md{
-        font-size: 20px;
-    }
-}
-p{
-    line-height: 26px;
-}
-
-.section-gap{
-    @apply py-12;
-    @screen lg{
-        @apply py-20
-    }
-    @screen xl{
-        @apply py-24;
-    }
-}
-img{
-    -webkit-user-drag: none;
-}
+  }
+  .d-none{
+    display:none;
+  }
+  .container{
+    width: 100%!important;
+    max-width: 1280px!important;
+  }
+  .slick-prev {
+    left: 0px;
+  }
+  .slick-next {
+    right: 0px;
+  }
+  
+  .embeded-responsive{
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .embeded-responsive:before{
+    content:"";
+    display:block;
+  }
+  
+  .embeded-responsive-16by9:before{
+    padding-top:56.25%;
+  }
+  
+  .embeded-responsive-4by3:before{
+    padding-top:75%;
+  }
+  
+  .embeded-responsive-1by1:before{
+    padding-top:100%;
+  }

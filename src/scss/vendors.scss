@@ -5,32 +5,109 @@
 
 @import "theme/overridable";
 
-@tailwind utilities;
-
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+@tailwind utilities;
+
+/* One Col Slider */
 .one-col-slider:not(.slick-initialized){
 @apply flex overflow-hidden;
     >div{
         @apply w-full flex-shrink-0;
     }
 }
-ul.slick-dots{
-    bottom: 12px;
-    @screen md{
-        bottom: 20px;
+/* Three Col slider */
+.three-col-slider:not(.slick-initialized){
+    @apply flex overflow-hidden;
+    > div{
+      @apply flex-shrink-0 w-full;
+      @screen sm{
+        @apply w-1/2;
+      }
+      @screen lg{
+        @apply w-1/3;
+      }
     }
+  }
+  /* Five Col Slider */
+  .five-col-slider:not(.slick-initialized){
+    @apply flex overflow-hidden;
+    > div{
+      @apply flex-shrink-0 w-full;
+      @media(min-width:600px){
+        @apply w-1/2;
+      }
+      @screen md{
+        @apply w-1/3;
+      }
+      @screen lg{
+        @apply w-1/5;
+      }
+    }
+  }
+  /* Six Col Slider */
+  .six-col-slider:not(.slick-initialized){
+    @apply flex overflow-hidden;
+    > div{
+      @apply flex-shrink-0 w-full;
+      @media(min-width:600px){
+        @apply w-1/2;
+      }
+      @screen md{
+        @apply w-1/3;
+      }
+      @screen lg{
+        @apply w-1/4;
+      }
+    }
+  }
+  
+  /* Slick dotted position */
+  .slick-dotted.slick-slider{
+    @apply mb-0;
+    .slick-dots{
+      bottom: -40px;
+    }
+  }
+  
+  /* Equal height Slider */
+  .equal-height-slider{
+    .slick-track{
+      @apply flex;
+    }
+    &:not(.vertical-center-slider){
+      .slick-slide{
+        height: auto!important;
+        >div{
+          @apply h-full;
+        }
+      }
+    }
+    &.vertical-center-slider{
+      .slick-track{
+        @apply items-center;
+      }
+    }
+  }
+  
+  /* Slick Dots */
+  .slick-dots{
     li{
-        @apply w-7 h-2 bg-white opacity-30; 
-        button{
-            @apply hidden;
-        }
-        &.slick-active{
-            @apply opacity-100;
-        }
+      @apply w-4 rounded-sm h-2 bg-blue;
+      opacity:.15;
+      @screen md{
+        @apply w-8;
+      }
+      button{
+        @apply hidden;
+      }
+      &.slick-active{
+        @apply opacity-100;
+      }
     }
-}
-.slick-dotted.slick-slider{
-    margin-bottom: 0px !important;
-}
+  }
+  
+  .slick-slide:focus{
+    outline:0 !important;
+  }

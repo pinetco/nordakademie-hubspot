@@ -1,0 +1,54 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<header class="header">
+
+{#  
+  {% dnd_area 'header_dnd_top'
+    label='Top header',
+    class='header__dnd--top'
+  %}
+  {% end_dnd_area %}
+
+
+
+  <div class="header__container header__container--upper{% if content.translated_content|length %} header__container--visible-mobile{% endif %}">
+    <div class="header__container-inner-wrapper">
+
+
+      <div class="header__top-navigation">
+        {% module 'top_header_navigation'
+          path='../../modules/Navigation',
+          label='Top navigation'
+        %}
+      </div>
+
+
+
+      {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
+        <div class="header__language-switcher">
+          <div class="header__language-switcher-label">
+            {% module 'language-switcher'
+              path='@hubspot/language_switcher',
+              label='Language switcher',
+              display_mode='localized',
+              extra_classes='header__language-switcher-wrapper'
+            %}
+            <div class="header__language-switcher-label-current"> {{ locale_name(locale) }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+
+
+  {% dnd_area 'header_dnd_bottom'
+    label='Bottom header',
+    class='header__dnd--bottom'
+  %}
+  {% end_dnd_area %} #}
+
+</header>

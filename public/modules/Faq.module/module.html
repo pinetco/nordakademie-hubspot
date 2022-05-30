@@ -1,0 +1,24 @@
+<div class="{% if module.module_settings.spacing.remove_top_space %} pt-0 {% endif %} {% if module.module_settings.spacing.remove_bottom_space %} pb-0 {% endif %}" style="{% if module.module_settings.spacing.remove_top_space %}padding-top:{{ module.module_settings.spacing.custom_top_spacing ~ 'px' }};{% endif %} {% if module.module_settings.spacing.remove_bottom_space %} padding-bottom:{{ module.module_settings.spacing.custom_bottom_spacing ~ 'px' }}{% endif %}" {% if module.module_settings.module_name %}id="{{ module.module_settings.module_name }}"{% endif %}>
+  <div class="accordion">
+    {% for item in module.questions %}
+      <div style="background-color: {{ module.module_settings.accordion_background_color.color }}" class="accordion-question-wrapper rounded overflow-hidden transition-all duration-500 shadow {% if loop.first %} is-active {% endif %} {% if not loop.last %} mb-4 {% endif %}">
+        <h5 class="mb-0 py-4 px-4 md:px-6 accordion-question flex justify-between items-center cursor-pointer transition-colors duration-500">
+          <span class="mr-3">
+            {{ item.question }}
+          </span>
+          <svg class="flex-shrink-0" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </h5>
+        <div class="accordion-answer" {% if not loop.first %} style="display:none" {% endif %}>
+          <div class="px-4 md:px-6">
+            <div class="richtext border-secondary py-4">
+              {{ item.answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

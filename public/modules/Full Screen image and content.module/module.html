@@ -1,0 +1,73 @@
+<section class="{% if module.module_settings.add_white_typography %} typo-white {% endif %}" {% if module.module_settings.module_name %}id="{{ module.module_settings.module_name }}"{% endif %}>
+  <div class="flex flex-wrap">
+    <div class="flex items-center w-full px-4 py-6 md:w-1/2 lg:p-24">
+      <div>
+        {% if module.content.sup_title or module.content.title or module.content.richtext %}
+        <div class="max-w-4xl mx-auto">
+          {% if module.content.sup_title %}<b class="block text-primary mb-2">{{ module.content.sup_title }}</b>{% endif %} 
+          {% if module.content.title %}<h2>{{ module.content.title }}</h2>{% endif %}
+          {% if module.content.richtext %}
+          <div class="richtext"> 
+            {{ module.content.richtext }}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if module.add_button %}
+        <div class="mt-6 space-x-2">
+          {% for item in module.button %}
+          {% set button_class = item.button_style %}
+
+          {% if item.button_type == "link" %}
+
+          {% set href = item.link.url.href %}
+          {% if !item.link.url.href %}
+          {% set href = "javascript:;" %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if item.link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if item.link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a href="{{ href }}"
+             class="flex md:inline-flex m-1 {{ button_class }}"
+             {% if item.link.open_in_new_tab and item.link.url.href %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ item.button_label }}
+          </a>
+
+          {% elif item.button_type == "scroll_to_module" %}
+
+          {% if item.module_name_to_scroll %}
+          {% set module_name_for_scroll = "#" + item.module_name_to_scroll|trim %}
+          {% else %}
+          {% set module_name_for_scroll = "javascript:;" %}
+          {% endif %}
+          <a href="{{ module_name_for_scroll }}" 
+             {% if item.module_name_to_scroll %} data-scroll="true" {% endif %} 
+             class="flex md:inline-flex m-1 {{ button_class }}">
+            {{ item.button_label }}
+          </a>
+          
+          {% elif item.button_type == "hubspot_chat" %}
+            <a href="javascript:window.HubSpotConversations.widget.open();" 
+               class="flex md:inline-flex m-1 {{ button_class }}">
+              {{ item.button_label }}
+            </a>
+          {% endif %}
+          
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="relative w-full overflow-hidden bg-white md:w-1/2 bg-gray">
+      {% if module.image.src %}
+      <img class="absolute inset-0 object-cover object-center w-full h-full" src="{{ module.image.src }}" alt="{{ module.image.alt }}" loading="lazy" width="{{ module.image.width }}" height="{{ module.image.height }}">
+      {% endif %}
+    </div>
+  </div>
+</section>

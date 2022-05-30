@@ -1,0 +1,24 @@
+<section {% if module.module_settings.module_name %}id="{{ module.module_settings.module_name }}"{% endif %}>
+  <div class="break-words">
+    <div class="md:flex items-center">
+      <div class="md:order-last w-full md:w-1/2 mb-10 md:mb-0">
+        {% if module.media.author_image.src %}
+          <img class="w-full h-auto max-w-sm mx-auto" src="{{ module.media.author_image.src }}" alt="{{ module.media.author_image.alt }}" width="{{ module.media.author_image.width }}" height="{{ module.media.author_image.height }}">
+        {% endif %}
+      </div>
+      <div class="w-full md:w-3/5 pr-0 md:pr-12 lg:pr-24 text-center md:text-left">
+        {% if module.content.testimonial_text %}
+        <div class="richtext mb-10 no-typo">  
+          {{ module.content.testimonial_text }}
+        </div>
+        {% endif %}
+        {% if module.content.author_name %}
+        <h4 class="mb-0">{{ module.content.author_name }}</h4>
+        {% endif %}
+        {% if module.content.author_designation %}
+        <span class="text-sm">{{ module.content.author_designation }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

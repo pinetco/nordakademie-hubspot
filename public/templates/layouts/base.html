@@ -1,0 +1,45 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title || pageTitle %}<title>{{ page_meta.html_title || pageTitle }}</title> {% endif %}
+    {% if site_setings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+     <meta name="description" content="{{ page_meta.meta_description }}">
+     {{ require_css(get_asset_url("../../assets/css/vendors.css")) }}
+    {{ require_css(get_asset_url("../../assets/css/app.css")) }}
+      {#<link type="text/css" rel="stylesheet" href="{{ get_asset_url('../../assets/css/vendors.css') }}" />
+     <link type="text/css" rel="stylesheet" href="{{ get_asset_url('../../assets/css/app.css') }}" /> #}
+    {% block template_stylesheets %}
+      {# if templates need any specific styles then write here ... #}
+    {% endblock template_stylesheets %}
+     {{ require_css(get_asset_url("../../assets/css/theme-override.css")) }}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      <!-- Include Header -->
+      {% block header %}
+        {% global_partial path="../partials/header.html" %}
+      {% endblock header %}
+      
+      <!-- Body part between except header and footer -->
+      <main>
+        {% block body %}
+
+        {% endblock body %}     
+      </main>
+      
+      <!-- Include Footer -->
+      {% block footer %}
+        {% global_partial path="../partials/footer.html" %}
+      {% endblock footer %}
+    </div>
+    {{ require_js(get_asset_url('../../assets/js/vendors.js')) }}
+    {{ require_js(get_asset_url('../../assets/js/app.js')) }}
+    {{ standard_footer_includes }}
+  </body>
+</html>

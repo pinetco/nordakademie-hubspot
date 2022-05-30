@@ -1,0 +1,99 @@
+<div class="px-4 d-none lg:block">
+  <div class="flex items-center justify-between -mx-3 header-border">
+    <ul class="flex items-center p-3 space-x-12 text-dark">
+      <li class="flex items-center space-x-2">
+        <span>
+          <svg class="w-5 h-5 stroke-body" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <a href="javascript:;">
+          hello@test.com
+        </a>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span>
+          <svg class="w-5 h-5 stroke-body" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </span>
+        <span>
+          Mo. - Fr.: 09:00 - 18:00 Uhr
+        </span>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span>
+          <svg class="w-5 h-5 stroke-body" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </span>
+        <a href="javascript:;">
+          Tel: +123 3455677890
+        </a>
+      </li>
+    </ul>
+    {% if module.add_social_media_buttons %}
+    <div class="p-3">
+      <div class="flex items-center space-x-4">
+        {% for item in module.social_media_icon %}
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        {% if !item.link.url.href %}
+        {% set href = "javascript:;" %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if item.link.open_in_new_tab and item.link.url.href %}target="_blank"{% endif %}
+           {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+          {% if item.icon.src %}
+          <img class="w-5 h-5 object-center object-cover" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" loading="lazy" width="{{ item.icon.width }}" height="{{ item.icon.height }}">
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+<header class="header px-4 py-3">
+  <div class="flex items-center justify-between">
+    <div class="header-logo">
+      {% logo
+        override_inherited_src="{{ module.logo.override_inherited_src }}"
+        src="{{ module.logo.src }}"
+        alt="{{ module.logo.alt }}"
+        width="{{ module.logo.width }}"
+        height="{{ module.logo.height }}"
+        suppress_company_name="{{ module.logo.suppress_company_name }}"
+      %}
+    </div>
+    <div class="flex items-center justify-end">
+      <div class="header-navigation">
+        {% menu id="{{ module.menu }}" , flyouts='false', max_levels='2' %}
+      </div>
+      {% if module.add_button %}
+      <div class="d-none sm:block">
+        {% for item in module.button %}
+        {% if item.button_type == 'link' %}
+
+        {% set href = item.link.url.href %}
+        {% if !item.link.url.href %}
+        {% set href = "javascript:;" %}
+        {% endif %}
+        <a href="{{ href }}" class="{{ item.button_style }}"
+           {% if item.link.open_in_new_tab and item.link.url.href %}target="_blank"{% endif %}
+           {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+          {{ item.button_label }}
+        </a>
+
+        {% elif item.button_type == 'cta' %}
+
+        {% cta guid="{{ item.cta }}" %}
+
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      <button class="navigation-humberg ml-4">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

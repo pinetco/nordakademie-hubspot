@@ -1,0 +1,247 @@
+[ {
+  "id" : "9e5ce152-bce2-56ae-c605-3a0da4cd9b8d",
+  "name" : "logo",
+  "display_width" : null,
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://fs.hubspotusercontent00.net/hubfs/19610506/bignextstep-logo-1.svg",
+    "alt" : "bignextstep-logo-1",
+    "suppress_company_name" : true,
+    "width" : 400,
+    "height" : 400
+  }
+}, {
+  "id" : "e5dc5779-7a8f-4202-22e5-e6aef2368e22",
+  "name" : "menu",
+  "display_width" : null,
+  "label" : "Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 56632939814
+}, {
+  "id" : "2b765701-1cd7-7673-065d-f4c48117d4fa",
+  "name" : "add_social_media_buttons",
+  "display_width" : null,
+  "label" : "Add Social Media Buttons",
+  "required" : false,
+  "locked" : true,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "8dee6894-af3a-b881-f311-d2f8a601727a",
+  "name" : "social_media_icon",
+  "display_width" : null,
+  "label" : "Social Media Icon",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "visibility" : {
+    "controlling_field" : "2b765701-1cd7-7673-065d-f4c48117d4fa",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "1b0c4482-336b-e380-364f-1c8342e6a1bb",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "a100bf90-a4ac-2430-7214-c63224388c1d",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "3f969bcd-ec8e-7e86-cadf-a756b6567349",
+  "name" : "add_button",
+  "display_width" : null,
+  "label" : "Add Button",
+  "required" : false,
+  "locked" : true,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "fe2e5108-6ef4-a32a-e66a-82129c7c211e",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "visibility" : {
+    "controlling_field" : "3f969bcd-ec8e-7e86-cadf-a756b6567349",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4cb749c2-8d92-5295-f83c-3b53a2bf400d",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "link", "Link" ], [ "cta", "CTA" ] ],
+    "type" : "choice"
+  }, {
+    "id" : "56015121-70c2-9368-0176-3c0b1f187941",
+    "name" : "button_style",
+    "display_width" : null,
+    "label" : "Button Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "4cb749c2-8d92-5295-f83c-3b53a2bf400d",
+      "controlling_value_regex" : "cta",
+      "operator" : "NOT_EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "button-primary", "Primary Button" ], [ "button-secondary", "Secondary Button" ] ],
+    "type" : "choice"
+  }, {
+    "id" : "bf01462f-8db2-e65d-a5e1-6081b9b5b09c",
+    "name" : "button_label",
+    "display_width" : null,
+    "label" : "Button Label",
+    "required" : false,
+    "locked" : true,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "4cb749c2-8d92-5295-f83c-3b53a2bf400d",
+      "controlling_value_regex" : "cta",
+      "operator" : "NOT_EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Chat starten!"
+  }, {
+    "id" : "0469be05-e089-59d3-e90a-61d047e86c59",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "4cb749c2-8d92-5295-f83c-3b53a2bf400d",
+      "controlling_value_regex" : "link",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "ebbf970f-c2df-afff-8985-3174b9b77328",
+    "name" : "cta",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "4cb749c2-8d92-5295-f83c-3b53a2bf400d",
+      "controlling_value_regex" : "cta",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_label" : "Chat starten!",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

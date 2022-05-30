@@ -1,0 +1,36 @@
+@import "config/config";
+
+@tailwind base;
+@tailwind components;
+
+@import "theme/overridable";
+
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.one-col-slider:not(.slick-initialized){
+@apply flex overflow-hidden;
+    >div{
+        @apply w-full flex-shrink-0;
+    }
+}
+ul.slick-dots{
+    bottom: 12px;
+    @screen md{
+        bottom: 20px;
+    }
+    li{
+        @apply w-7 h-2 bg-white opacity-30; 
+        button{
+            @apply hidden;
+        }
+        &.slick-active{
+            @apply opacity-100;
+        }
+    }
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0px !important;
+}

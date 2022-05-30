@@ -1,0 +1,20 @@
+{
+  "label" : "Nordakademie",
+  "preview_path" : null,
+  "screenshot_path" : null,
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 767px)",
+      "previewWidth": {
+        "value": 520
+      }
+    }
+  ],
+  "enable_domain_stylesheets" : false,
+  "is_available_for_new_content" : true,
+  "author" : {
+    "name" : "",
+    "email" : ""
+  }
+}

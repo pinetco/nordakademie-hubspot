@@ -1,0 +1,12 @@
+.tab-link{
+  &.active{
+    @apply pointer-events-none border-blue text-blue;
+  }
+}
+.tab-content{
+  @apply hidden translate-y-4;
+  animation: fadeIn 0.3s ease 1 forwards;
+  &.active{
+    @apply block;
+  }
+}

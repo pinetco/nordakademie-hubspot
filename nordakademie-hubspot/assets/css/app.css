@@ -457,3 +457,21 @@ textarea {
   left: 0;
   right: 0;
 }
+
+.tab-link.active {
+  pointer-events: none;
+  border-color: #003A79;
+  --tw-text-opacity: 1;
+  color: rgba(0, 58, 121, var(--tw-text-opacity));
+}
+
+.tab-content {
+  display: none;
+  --tw-translate-y: 1rem;
+  -webkit-animation: fadeIn 0.3s ease 1 forwards;
+          animation: fadeIn 0.3s ease 1 forwards;
+}
+
+.tab-content.active {
+  display: block;
+}

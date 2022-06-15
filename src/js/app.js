@@ -115,6 +115,13 @@ $('.six-col-slider').slick({
     ]
 });
 
+/* Tab Logic */
+$('.tab-link').click( function() {
+    var tabID = $(this).attr('data-tab');
+    $(this).addClass('active').siblings().removeClass('active');
+    $('#tab-'+tabID).addClass('active').siblings().removeClass('active');
+});
+
 /*  FAQ Logic */
 $(".accordion-question").click(function(){
     var isActive = $(this).parent().hasClass("is-active");

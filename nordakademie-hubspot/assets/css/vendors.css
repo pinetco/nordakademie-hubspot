@@ -1058,6 +1058,10 @@ b {
   padding-top: 56.25%;
 }
 
+.embeded-responsive-21by9:before {
+  padding-top: 42.85%;
+}
+
 .embeded-responsive-4by3:before {
   padding-top: 75%;
 }
@@ -16522,6 +16526,30 @@ b {
   }
 }
 
+/* Four Col Slider */
+
+.four-col-slider:not(.slick-initialized) {
+  display: flex;
+  overflow: hidden;
+}
+
+.four-col-slider:not(.slick-initialized) > div {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .four-col-slider:not(.slick-initialized) > div {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .four-col-slider:not(.slick-initialized) > div {
+    width: 25%;
+  }
+}
+
 /* Five Col Slider */
 
 .five-col-slider:not(.slick-initialized) {
@@ -16613,17 +16641,12 @@ b {
 /* Slick Dots */
 
 .slick-dots li {
-  height: 0.5rem;
-  width: 1rem;
+  width: 22px;
+  height: 4px;
   border-radius: 0.125rem;
   background-color: #003A79;
+  border-radius: 36px;
   opacity: 0.15;
-}
-
-@media (min-width: 768px) {
-  .slick-dots li {
-    width: 2rem;
-  }
 }
 
 .slick-dots li button {
@@ -16636,6 +16659,61 @@ b {
 
 .slick-slide:focus {
   outline: 0 !important;
+}
+
+.slick-arrow {
+  z-index: 10;
+  opacity: 1;
+  transition-duration: 300ms;
+  top: 50%;
+}
+
+.slick-arrow:before {
+  content: "";
+  background-size: 13px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slick-arrow.slick-prev {
+  transform: translate(-50%, -50%);
+  left: 0px;
+}
+
+.slick-arrow.slick-prev:before {
+  background-image: url("https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/Developer%20Assets/left-arrow.svg");
+}
+
+.slick-arrow.slick-next {
+  transform: translate(50%, -50%);
+  right: 0px;
+}
+
+.slick-arrow.slick-next:before {
+  background-image: url("https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/Developer%20Assets/right-arrow.svg");
+}
+
+.card-slider .slick-arrow.slick-next,
+.card-slider .slick-arrow.slick-prev {
+  top: -9px !important;
+}
+
+.card-slider .slick-arrow.slick-prev {
+  left: 20px;
+}
+
+.card-slider .slick-arrow.slick-next {
+  right: 22px;
+}
+
+.card-slider.slick-dotted.slick-slider .slick-dots {
+  bottom: 100%;
 }
 
 @media (min-width: 640px){

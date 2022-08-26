@@ -1,0 +1,7 @@
+.accordion{
+  border-top: 1px solid #e6e1dc;
+  border-bottom: 1px solid #e6e1dc;
+}
+.accordion .accordion-question-wrapper:not(:last-child){
+  border-bottom: 1px solid #e6e1dc;
+}

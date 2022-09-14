@@ -1,0 +1,33 @@
+.bottom-triangle{
+  transform: skewX(-45deg);
+}
+.top-triangle{
+  display:none;
+}
+
+
+@media screen and (min-width: 600px)  {
+  .study-card{
+    padding-top: 50px;
+  }
+  .study-card > div:nth-child(odd){
+    transform: translateY(-50px);
+  }
+}
+@media screen and (max-width: 600px){
+  .top-triangle{
+    display:block;
+    transform: skewY(135deg);
+  }
+}
+
+
+
+.slick-dotted.slick-slider .slick-dots {
+  bottom: -40px;
+}
+
+.study-card .slick-next, .study-card .slick-prev{
+  top:unset;
+  bottom:-46px;
+}

@@ -1,0 +1,23 @@
+.image_overlay{
+  position: absolute;
+  inset:0;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  background-color:transparent;
+  transition: all .3s ease-in-out;
+}
+.image_overlay:hover{
+  opacity:1;
+  background-color: rgba(0, 58, 121, .4);
+  color: #003A79;
+  z-index: 10;
+}
+.team-slider.two-col-slider .slick-dots li {
+  background-color: #003A79;
+  opacity: 0.2;
+}
+.team-slider.two-col-slider .slick-dots li.slick-active {
+  background-color: #003A79;
+  opacity: 1;
+}

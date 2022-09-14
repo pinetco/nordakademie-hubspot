@@ -16,6 +16,7 @@ module.exports = {
         'silver-light': '#F8F7F6',
         'white' : '#FFFFFF',
         'black' : '#000000',
+        'gray' : "#707070",
         'transparent' : 'transparent'
       }
     },

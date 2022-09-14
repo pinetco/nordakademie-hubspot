@@ -1,0 +1,27 @@
+.bg_overlay{
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 58, 121, 0) 0%,rgba(0, 58, 121, 0.7) 100%);
+  inset: 0;
+}
+.study-subpage-slider .slick-dots {
+  bottom: unset!important;
+  top: -25px;
+}
+.study-subpage-slider .slick-arrow {
+  top: -10px;
+}
+.study-subpage-slider .slick-arrow.slick-next {
+  right: 25px;
+}
+.study-subpage-slider .slick-arrow.slick-prev {
+  left: 25px;
+}
+
+.study-subpage-slider .slick-arrow.slick-next:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 21.7991L11.8995 11.8996' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 2L11.8995 11.8995' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  opacity: 1;
+}
+.study-subpage-slider .slick-arrow.slick-prev:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.7991L2.10051 11.8996' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 2L2.10051 11.8995' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  opacity: 1;
+}

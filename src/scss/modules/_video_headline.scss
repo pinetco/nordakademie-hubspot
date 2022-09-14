@@ -1,0 +1,19 @@
+.video-inner-top-left{
+  @apply w-full;
+  clip-path: polygon(100% 0, 0 100%, 0 0);
+  padding-top: 100%;
+}
+.video-inner-bottom-right{
+  @apply w-full;
+  clip-path: polygon(100% 20%, 0 100%, 100% 100%);
+  padding-top: 100%;
+}
+.video-top-left{
+  @apply absolute top-0 left-0;
+}
+.video-bottom-right {
+  @apply absolute bottom-0 right-0;
+}
+.content-img:hover .backdrop-white{
+  @apply opacity-50;
+}

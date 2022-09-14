@@ -20,19 +20,24 @@ $('.one-col-slider').slick({
 });
 // Two Col Slider Logic
 $('.two-col-slider').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
-    responsive: [{
-        breakpoint: 600,
-        settings: {
-            slidesToShow: 1,
-            dots: true
-        }
-    }]
+    dots: true,
+    swipeToSlide: true,
+    infinite: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+            }
+        },
+    ]
 });
 // Three Col Slider Logic
 $('.three-col-slider').slick({
@@ -58,7 +63,6 @@ $('.three-col-slider').slick({
         }
     }]
 });
-// icon and text repeater Slider Logic
 //   function mobileOnlySlider() {
 $('.icon-text-repeater').slick({
     dots: false,
@@ -85,7 +89,6 @@ $('.icon-text-repeater').slick({
     }]
 });
 // Five Col Slider Logic
-
 $('.five-col-slider').slick({
     dots: true,
     arrows: true,
@@ -112,7 +115,6 @@ $('.five-col-slider').slick({
     }]
 });
 // Six Col Slider Logic
-
 $('.six-col-slider').slick({
     dots: true,
     arrows: false,
@@ -139,15 +141,47 @@ $('.six-col-slider').slick({
         }
     }]
 });
+// Year Slider
+$('.year-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 5,
+    speed: 800,
+    asNavFor: '.year-data-slider',
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings:{
+                slidesToShow: 4
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                arrows: false
+            }
+        }]
+});
+$('.year-data-slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    asNavFor: '.year-slider',
+});
 /* Tab Logic */
-
 $('.tab-link').click(function () {
     var tabID = $(this).attr('data-tab');
     $(this).addClass('active').siblings().removeClass('active');
     $('#tab-' + tabID).addClass('active').siblings().removeClass('active');
 });
 /*  FAQ Logic */
-
 $(".accordion-question").click(function () {
     var isActive = $(this).parent().hasClass("is-active");
 
@@ -161,7 +195,6 @@ $(".accordion-question").click(function () {
     }
 });
 //study-program card slider
-
 function mobileOnlySlider() {
     $('.study-card').slick({
         dots: true,
@@ -181,7 +214,6 @@ function mobileOnlySlider() {
 if (window.innerWidth < 768) {
     mobileOnlySlider();
 }
-
 $(window).resize(function (e) {
     if (window.innerWidth < 768) {
         if (!$('.study-card').hasClass('slick-initialized')) {
@@ -192,8 +224,8 @@ $(window).resize(function (e) {
             $('.study-card').slick('unslick');
         }
     }
-}); // quotation-slider
-
+});
+// quotation-slider
 $('.quotation-slider').slick({
     dots: false,
     infinite: true,
@@ -236,3 +268,48 @@ $('.counter-slider').slick({
         }
     }]
 });
+
+$("[data-toggle='modal']").click(function(){
+    var TargetModalId = '#' + $(this).data("target");
+    $(TargetModalId).fadeIn();
+});
+
+$("[data-close]").click(function(){
+    $(this).parents(".modal").fadeOut();
+});
+
+$('.studyformat-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    swipeToSlide: true,
+    infinite: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [{
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    }]
+});
+$('.study-subpage-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    swipeToSlide: true,
+    infinite: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [{
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    }]
+});
+

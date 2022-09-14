@@ -1,0 +1,27 @@
+.video-shape-inner{
+  padding-top: 56.25%;
+  width: 100%;
+}
+.video-shape-scale .video-shape-inner{
+  clip-path: polygon(0 0,100% 0,100% 50%,65% 100%,0 100%,0 50%);
+}
+.video-shape-scale{
+  width: calc(8.33% * 12);
+  position: static;
+  left: 0;
+  top: 0;
+}
+@media(min-width:768px){
+  .video-shape-scale .video-shape-inner{
+    clip-path: polygon(0 0,100% 0,0 100%);
+  }
+  .video-shape-scale{
+    width: calc(8.33% * 6)
+  }
+  .video-shape-inner{
+    padding-top: 100%;
+  }
+  .video-shape-scale{
+    position: absolute;
+  }
+}

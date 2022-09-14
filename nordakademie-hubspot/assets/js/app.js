@@ -25,16 +25,19 @@ $('.one-col-slider').slick({
 }); // Two Col Slider Logic
 
 $('.two-col-slider').slick({
-  dots: false,
-  infinite: false,
-  speed: 300,
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: false,
+  dots: true,
+  swipeToSlide: true,
+  infinite: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
   responsive: [{
-    breakpoint: 600,
+    breakpoint: 768,
     settings: {
       slidesToShow: 1,
+      slidesToScroll: 1,
       dots: true
     }
   }]
@@ -62,8 +65,7 @@ $('.three-col-slider').slick({
       dots: true
     }
   }]
-}); // icon and text repeater Slider Logic
-//   function mobileOnlySlider() {
+}); //   function mobileOnlySlider() {
 
 $('.icon-text-repeater').slick({
   dots: false,
@@ -141,6 +143,38 @@ $('.six-col-slider').slick({
       slidesToShow: 2
     }
   }]
+}); // Year Slider
+
+$('.year-slider').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  slidesToShow: 5,
+  speed: 800,
+  asNavFor: '.year-data-slider',
+  slidesToScroll: 1,
+  responsive: [{
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 4
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 3,
+      arrows: false
+    }
+  }]
+});
+$('.year-data-slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  asNavFor: '.year-slider'
 });
 /* Tab Logic */
 
@@ -235,6 +269,47 @@ $('.counter-slider').slick({
       slidesToShow: 1,
       dots: true,
       arrows: true
+    }
+  }]
+});
+$("[data-toggle='modal']").click(function () {
+  var TargetModalId = '#' + $(this).data("target");
+  $(TargetModalId).fadeIn();
+});
+$("[data-close]").click(function () {
+  $(this).parents(".modal").fadeOut();
+});
+$('.studyformat-slider').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: true,
+  swipeToSlide: true,
+  infinite: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  responsive: [{
+    breakpoint: 576,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
+});
+$('.study-subpage-slider').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: true,
+  swipeToSlide: true,
+  infinite: false,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  responsive: [{
+    breakpoint: 576,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
     }
   }]
 });

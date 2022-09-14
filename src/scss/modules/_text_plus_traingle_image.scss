@@ -1,0 +1,18 @@
+.traingle-image-top-left{
+  position: static;
+  right: 0;
+  top: 0;
+  width: calc(8.33% * 12);
+}
+.traingle-image-top-left .shape-inner{
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+@media(min-width:768px){
+  .traingle-image-top-left{
+    width: calc(8.33% * 4);
+  }
+  .traingle-image-top-left{
+    position: absolute;
+    width: calc(8.33% * 4);
+  }
+}

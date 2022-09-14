@@ -48,3 +48,50 @@
   .embeded-responsive-1by1:before{
     padding-top:100%;
   }
+.shape-top-left,.shape-top-right, .shape-bottom-left, .shape-bottom-right{
+  position: absolute;
+}
+.shape-top-left{
+  top: 0px;
+  left: 0px;
+}
+.shape-top-right{
+  top: 0px;
+  right: 0px;
+}
+.shape-bottom-left{
+  bottom: 0px;
+  left: 0px;
+}
+.shape-bottom-right{
+  bottom: 0px;
+  right: 0px;
+}
+.shape-inner{
+  width: 100%;
+  padding-top: 100%;
+}
+.shape-top-left .shape-inner{
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.shape-top-right .shape-inner{
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.shape-bottom-left .shape-inner{
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+.shape-bottom-right .shape-inner{
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+.shape-top-left .shape-outer, .shape-bottom-left .shape-outer{
+  right: 100%;
+}
+.shape-top-right .shape-outer, .shape-bottom-right .shape-outer{
+  left: 100%;
+}
+.shape-outer{
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}

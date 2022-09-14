@@ -1,0 +1,40 @@
+.studyformat-card > div:nth-child(odd){
+  transform: translateY(-40px);
+}
+.studyformat-card > div:nth-child(odd) .shape-color{
+  background:#3CD2FF;
+}
+.studyformat-card > div:nth-child(even) .shape-color{
+  background:#FFA064;
+}
+.studyformat-card > .slick-track > div:nth-child(odd) .shape-color{
+  background:#3CD2FF;
+}
+.studyformat-card > .slick-track > div:nth-child(even) .shape-color{
+  background:#FFA064;
+}
+.studyformat-slider .slick-dots {
+  bottom: unset!important;
+  top: -25px;
+}
+.studyformat-slider .slick-arrow {
+  top: -10px;
+}
+.studyformat-slider .slick-arrow.slick-next {
+  right: 25px;
+}
+.studyformat-slider .slick-arrow.slick-prev {
+  left: 25px;
+}
+
+.studyformat-slider .slick-arrow.slick-next:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 21.7991L11.8995 11.8996' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 2L11.8995 11.8995' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  opacity: 1;
+}
+.studyformat-slider .slick-arrow.slick-prev:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.7991L2.10051 11.8996' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 2L2.10051 11.8995' stroke='%23003A79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  opacity: 1;
+}
+.headline::first-line {
+  color:#fff;
+}

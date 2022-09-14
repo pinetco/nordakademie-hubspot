@@ -1,0 +1,78 @@
+.theme-form-silver {
+  .hs-form {
+    .hs-button{
+    @apply bg-peach text-blue border-2 border-blue transition-colors duration-300;
+    &:hover{
+      @apply bg-blue text-white;
+    }
+    }
+    input,textarea{
+      @apply text-blue bg-transparent border border-blue;
+      &:focus{
+        border-width: 2px !important;
+        color: #003A79 !important;
+      }
+    }
+    textarea::placeholder,input::placeholder{
+      @apply text-blue;
+    }
+    select{
+      @apply bg-transparent text-blue border border-blue;
+    }
+    .hs-error-msgs{
+      color: red;
+    }
+  }
+}
+.theme-form-blue{
+  .hs-form {
+    .hs-button{
+      @apply bg-peach text-blue border-2 border-blue transition-colors duration-300;
+      &:hover{
+        @apply bg-white text-blue;
+      }
+    }
+    input,textarea{
+      @apply text-white bg-transparent border border-white;
+      &:focus{
+        border-width: 2px !important;
+        color: #FFFFFF !important;
+      }
+    }
+    textarea::placeholder,input::placeholder{
+      @apply text-white
+    }
+    select{
+      @apply bg-transparent text-white border border-white;
+    }
+    .hs-error-msgs{
+      @apply text-white;
+    }
+  }
+}
+.theme-form-navy{
+  .hs-form {
+    .hs-button{
+      @apply bg-transparent text-peach border-2 border-peach transition-colors duration-300;
+      &:hover{
+        @apply bg-peach text-blue;
+      }
+    }
+    input,textarea{
+      @apply text-white bg-transparent border border-white;
+      &:focus{
+        border-width: 2px !important;
+        color: #FFFFFF !important;
+      }
+    }
+    textarea::placeholder,input::placeholder{
+      @apply text-white
+    }
+    select{
+      @apply bg-transparent text-white border border-white;
+    }
+    .hs-error-msgs{
+      @apply text-white;
+    }
+  }
+}

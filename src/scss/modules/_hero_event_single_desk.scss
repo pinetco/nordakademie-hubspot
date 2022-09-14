@@ -1,0 +1,14 @@
+.m-top-shape-scale{
+  width: calc(8.33% * 12);
+}
+.m-bottom-shape-scale{
+  width: calc(8.33% * 20);
+}
+@media(min-width: 768px){
+  .m-top-shape-scale{
+    width: calc(8.33% * 4);
+  }
+  .m-bottom-shape-scale{
+    width: calc(8.33% * 9);
+  }
+}

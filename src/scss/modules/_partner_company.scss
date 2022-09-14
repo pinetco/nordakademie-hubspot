@@ -1,0 +1,40 @@
+.five-col-slider .slick-next:before,.five-col-slider .slick-prev:before {
+  color: #3C3C43;
+  opacity:0.3;
+  font-size:40px;
+}
+.five-col-slider .slick-next {
+  right: -20px;
+}
+.five-col-slider .slick-prev {
+  left: -20px;
+}
+.five-col-slider .slick-dots li {
+  background-color: #003A79;
+  height:5px;
+  width:33px;
+  border-radius:36px;
+}
+.max-w-logo{
+  max-width: 120px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px)  {
+  .card{
+    transition: all .5s ease-in-out;
+  }
+  .card:hover{
+    box-shadow: 0px 9px 20px 0px rgba(0, 58, 121, 0.13);
+    transition: .5s ease-in-out;
+    transform: translateY(-20px);
+  }
+  .learn-more{
+    opacity:0;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .card:hover .learn-more{
+    opacity:1;
+  }
+}

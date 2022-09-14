@@ -39,6 +39,9 @@
 }
 
 .hs-form{
+  .hs_error_rollup{
+    @apply hidden;
+  }
   fieldset{
     max-width:auto!important;
     max-width:unset!important;
@@ -62,23 +65,6 @@
       }
     }
   }
-  // .form-columns-2, .form-columns-3{
-  //   .hs-form-field{
-  //     @apply flex flex-col;
-  //     @media(max-width:767px){
-  //       width:100%!important;
-  //     }
-  //     > *{
-  //       @apply w-full;
-  //     }
-  //     .hs-field-desc{
-  //       order: 1;
-  //     }
-  //     .hs-error-msgs{
-  //       order: 2;
-  //     }
-  //   }
-  // }
   .form-columns-3{
     .hs-form-field{
       @screen md{
@@ -123,6 +109,8 @@
     @include checkbox();
   }
   .hs-button{
+    padding: 10px 15px;
+    border-radius: 28px;
     min-width: 200px;
     @apply cursor-pointer;
   }
@@ -139,7 +127,6 @@
   }
   .hs-error-msgs{
     @apply text-xs font-light;
-    color:red;
   }
   .hs-richtext, .legal-consent-container{
     @apply text-xs;
@@ -166,12 +153,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]
   &.invalid{
     border-color:red;
   }
-  &:focus{
-    @apply border-blue text-blue;
-  }
 }
 textarea{
   @include input;
+  border-radius: 20px;
   min-height: 100px;
   &:focus{
     @apply border-blue text-blue;
@@ -187,10 +172,6 @@ select{
   background-size: 14px;
   padding-right: 3rem!important;
   filter: grayscale(100);
-  &:focus{
-    filter: grayscale(0);
-    @apply border-blue text-blue;
-  }
 }
 
 textarea{

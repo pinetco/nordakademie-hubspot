@@ -1,6 +1,6 @@
 .tab-link{
   &.active{
-    @apply pointer-events-none border-blue text-blue;
+    @apply pointer-events-none border-b-8 border-blue text-blue relative;
   }
 }
 .tab-content{
@@ -9,4 +9,12 @@
   &.active{
     @apply block;
   }
+}
+.tab-link.active:after {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #003a79;
+  content: "";
+  bottom: -20px;
+  @apply left-1/2 absolute transform -translate-x-1/2;
 }

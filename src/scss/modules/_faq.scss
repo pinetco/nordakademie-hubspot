@@ -1,3 +1,13 @@
+.accordion-question-wrapper.is-active .accordion-btn:before,
+.accordion-question-wrapper .accordion-btn:before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 30px;
+  height: 30px;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
 .accordion{
   border-top: 1px solid #e6e1dc;
   border-bottom: 1px solid #e6e1dc;

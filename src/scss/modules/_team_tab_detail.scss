@@ -1,0 +1,39 @@
+.tab:not(.active){
+  display: none;
+}
+.accordion-toggle:before, .accordion-toggle:after {
+  content: "";
+  position: absolute;
+  background-color: #003A79;
+  transition: opacity 0.25s ease-out;
+}
+.accordion-toggle:before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  margin-left: -1px;
+}
+.accordion-toggle:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin-top: -1px;
+}
+.accordion-toggle:before {
+  opacity: 1;
+}
+.is-opened .accordion-toggle:before {
+  opacity: 0;
+}
+.team-detail-richtext > p{
+  margin-bottom: 10px;
+}
+.team-detail-richtext b,
+.team-detail-richtext strong{
+  font-weight: 900;
+  font-size: 21px;
+  margin-bottom: 10px;
+  display: block;
+}

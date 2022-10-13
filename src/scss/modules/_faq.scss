@@ -15,3 +15,15 @@
 .accordion .accordion-question-wrapper:not(:last-child){
   border-bottom: 1px solid #e6e1dc;
 }
+.bg-silver-light .accordion .accordion-question-wrapper,
+.bg-silver .accordion .accordion-question-wrapper{
+  border-bottom: 1px solid #003A79;
+}
+
+.accordion {
+  border-top: none;
+}
+
+.accordion-answer .richtext img{
+  padding:0 0 20px 15px;
+}

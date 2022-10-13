@@ -1,0 +1,15 @@
+
+.two-col-richtext li{
+  padding-left: 20px;
+  position: relative;
+}
+.two-col-richtext li:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #003A79;
+}

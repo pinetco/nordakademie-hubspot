@@ -17,6 +17,30 @@
       @apply w-full flex-shrink-0;
   }
 }
+.content-slider:not(.slick-initialized){
+  @apply flex overflow-hidden;
+  >div{
+    @apply w-full flex-shrink-0;
+  }
+}
+.quotation-slider:not(.slick-initialized){
+  @apply flex overflow-hidden;
+  >div{
+    @apply w-full flex-shrink-0;
+  }
+}
+.secondary-img-slider:not(.slick-initialized){
+  @apply flex overflow-hidden;
+  >div{
+    @apply w-full flex-shrink-0;
+  }
+}
+.background-header-slider:not(.slick-initialized){
+  @apply flex overflow-hidden;
+  >div{
+    @apply w-full flex-shrink-0;
+  }
+}
 
 /* Two Col Slider */
 .two-col-slider:not(.slick-initialized){

@@ -18,3 +18,10 @@
   bottom: -20px;
   @apply left-1/2 absolute transform -translate-x-1/2;
 }
+.bg-blue .tab-link.active,.bg-navy .tab-link.active{
+  border-color: #FFA064;
+  color: #FFA064;
+}
+.bg-blue .tab-link.active:after,.bg-navy .tab-link.active:after{
+  border-top: 15px solid #ffa064;
+}

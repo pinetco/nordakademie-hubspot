@@ -1,0 +1,107 @@
+.input-shadow{
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.25);
+}
+.btn-modal{
+  padding: 10px 18px !important;
+}
+@media(min-width: 768px){
+  .btn-modal{
+    padding: 23px 44px !important;
+  }
+}
+.background-header-slider, .background-header-slider .slick-list, .background-header-slider .slick-track,
+.background-header-slider .slick-slide, .background-header-slider .slick-slide div, .secondary-img-slider .slick-list, .secondary-img-slider .slick-track,
+.secondary-img-slider .slick-slide, .secondary-img-slider .slick-slide div{
+  height: 100%;
+}
+.bg-primary-shape{
+  clip-path: polygon(100% 22%, 0% 100%, 100% 100%)
+}
+.bg-msg-btn{
+  clip-path: polygon(100% 22%, 36% 100%, 100% 100%);
+}
+.bg-secondary-shape{
+  clip-path: polygon(100% 67%, 0% 100%, 100% 100%);
+}
+.bg-responsive-shape{
+  clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+}
+.h-hero{
+  height: 100vh;
+}
+
+
+@media (min-width: 768px){
+  .bg-secondary-shape{
+    clip-path: polygon(100% 22%, 0% 100%, 100% 100%);
+  }
+  .h-hero{
+    height: 600px;
+  }
+}
+@media (min-width: 1024px){
+  .bg-primary-shape{
+    clip-path: polygon(100% 22%, 0% 100%, 100% 100%);
+  }
+  .bg-msg-btn{
+    clip-path: polygon(100% 22%, 22% 100%, 100% 100%);
+  }
+  .h-hero{
+    height: 800px;
+  }
+
+}
+@media(min-width: 1280px){
+  .h-hero{
+    height: 100vh;
+  }
+}
+
+
+.arrows {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #003a79;
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+  stroke-width: 4px;
+}
+
+@keyframes arrow
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+@-webkit-keyframes arrow
+{
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-.75s;
+  -webkit-animation-delay:-.75s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}

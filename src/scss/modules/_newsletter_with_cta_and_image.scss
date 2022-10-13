@@ -3,13 +3,17 @@
   color: #003A79;
   font-size: 14px;
 }
-.newsletter-cta-form input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus, .newsletter-cta-form select:focus{
-  border-width: 2px;
+.newsletter-cta-form input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus, .newsletter-cta-form select:focus,
+.newsletter-cta-form .hs-form textarea:focus{
+  outline: 2px solid #003A79;
 }
-.newsletter-cta-form input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), .newsletter-cta-form select{
+.newsletter-cta-form input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), .newsletter-cta-form select,
+.newsletter-cta-form .hs-form textarea{
   border: 1px solid #003A79;
   color: #003A79;
   font-size: 14px;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease-in-out;
 }
 .newsletter-cta-form input::placeholder, .newsletter-cta-form textarea::placeholder,
 .newsletter-cta-form select::placeholder{
@@ -22,4 +26,18 @@
   background: #FFA064;
   color: #003A79;
   border: 2px solid #003A79;
+  transition: all 0.3s ease-in-out;
+}
+.newsletter-cta-form form .hs-button:hover,
+.newsletter-cta-form form input[type=submit]:hover{
+  font-size: 16px;
+  width: 100%;
+  background: #003A79;
+  color: #FFF;
+  border: 2px solid #003A79;
+}
+.newsletter-cta-form .hs-error-msgs li{
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 2px;
 }

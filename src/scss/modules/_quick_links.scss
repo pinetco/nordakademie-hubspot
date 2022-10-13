@@ -1,0 +1,23 @@
+.quicklinks .btn a{
+  min-width: 240px;
+  text-align: left;
+  justify-content: flex-start;
+}
+.modal-shape{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+@media(min-width: 640px){
+  .modal-shape{
+    clip-path: polygon(100% 0%,-100% 100%,100% 100%)
+  }
+}
+@media(min-width: 768px){
+  .modal-shape{
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+  }
+}
+@media(min-width: 1024px){
+  .modal-shape{
+    clip-path: polygon(100% 16%, 26% 100%, 100% 100%);
+  }
+}

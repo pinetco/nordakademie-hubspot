@@ -1,0 +1,25 @@
+.benifit-slider .slick-arrow.slick-prev {
+  left: 15px;
+}
+.benifit-slider .slick-arrow.slick-next {
+  right: 15px;
+}
+.white-arrow .slick-arrow.slick-prev:before ,
+.white-arrow .slick-arrow.slick-next:before
+{
+  background-size: 24px;
+}
+.white-arrow .slick-arrow.slick-prev:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/left-arrow-white.svg);
+}
+.white-arrow .slick-arrow.slick-next:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/right-arrow-white.svg);
+}
+
+.blue-arrow .slick-dots li {
+  background-color: #003a79;
+  opacity: .15;
+}
+.blue-arrow .slick-dots li.slick-active {
+  background-color: #003A79;
+}

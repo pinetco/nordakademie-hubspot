@@ -1,0 +1,16 @@
+.team-detail-richtext ul li{
+  position: relative;
+  padding-left: 17px;
+}
+.team-detail-richtext ul li:not(:last-child){
+  padding-bottom: 12px;
+}
+.team-detail-richtext ul li:before{
+  background: #003a79;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  width: 8px;
+}

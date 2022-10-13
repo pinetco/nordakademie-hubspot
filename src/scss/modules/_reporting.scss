@@ -1,0 +1,85 @@
+/* Form Blue CSS */
+.reporting-form-blue input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), .reporting-form select{
+  background: transparent;
+  border: 1px solid white;
+  font-size: 16px;
+}
+.reporting-form-blue input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus,
+.reporting-form-blue input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus::-webkit-input-placeholder{
+  background: white;
+  color: #003A79;
+}
+.reporting-form-blue .hs-form textarea{
+  min-height: 145px;
+  background: transparent;
+  border: 1px solid white;
+  font-size: 16px;
+}
+.reporting-form-blue .hs-form textarea:focus,
+.reporting-form-blue input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus{
+  border: 2px solid #0F192D;
+}
+.reporting-form-blue .hs-form textarea:focus,
+.reporting-form-blue .hs-form textarea:focus::-webkit-input-placeholder{
+  background: white;
+  color: #003A79;
+}
+.reporting-form-blue .hs-error-msg{
+  color: white;
+  font-size: 12px !important;
+}
+.reporting-form-blue input::-webkit-input-placeholder,
+.reporting-form-blue textarea::-webkit-input-placeholder {
+  color: white;
+}
+.reporting-form-blue .hs-button{
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.reporting-form-blue .hs-button:hover{
+  background: #ffffff;
+  color: #003A79;
+}
+
+/* Form White CSS */
+.reporting-form-white input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]), .reporting-form select{
+  background: transparent;
+  border: 1px solid #003A79;
+  font-size: 16px;
+}
+.reporting-form-white .hs-form textarea{
+  min-height: 145px;
+  background: transparent;
+  border: 1px solid #003A79;
+  font-size: 16px;
+}
+.reporting-form-white .hs-form textarea:focus,
+.reporting-form-white input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):focus{
+  border: 2px solid #003A79;
+}
+.reporting-form-white .hs-error-msg{
+  color: #003A79;
+  font-size: 12px !important;
+}
+.reporting-form-white input::-webkit-input-placeholder,
+.reporting-form-white textarea::-webkit-input-placeholder {
+  color: #003A79;
+}
+.reporting-form-white .hs-button{
+  background: #FFA064;
+  border: 2px solid #003A79;
+  color: #003A79;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.reporting-form-white .hs-button:hover{
+  background: #003A79;
+  color: #FFFFFF;
+}

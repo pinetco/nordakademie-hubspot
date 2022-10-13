@@ -32,3 +32,34 @@
     color: #E6E1DC;
   }
 }
+.testimonial-slider .slick-arrow.slick-prev:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/Developer%20Assets/img-slider-left.svg);
+}
+.testimonial-slider .slick-arrow.slick-next:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/Developer%20Assets/img-slider-right.svg);
+}
+.testimonial-slider .slick-arrow:before {
+  background-size: 30px;
+  height: 60px;
+  width: 60px;
+}
+
+.quotation-slider .bg-blue .btn-orange a:hover {
+  background:#FFFFFF;
+  border-color: #003a79;
+  color: #003a79;
+}
+
+.big_text {
+  padding-left: 100%;
+  animation: text 10s linear infinite;
+}
+
+@keyframes text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -5,8 +5,27 @@
 }
 .video-inner-bottom-right{
   @apply w-full;
-  clip-path: polygon(100% 20%, 0 100%, 100% 100%);
+  clip-path: polygon(100% 20%,15% 100%,100% 100%);
   padding-top: 100%;
+}
+.content-img .play-btn{
+  transition: all 0.5s ease-in-out;
+}
+.content-img:hover .play-btn{
+  color:#003A79;
+  background:#FFFFFF;
+}
+
+.content-img .play-btn-text{
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+
+.content-img:hover .play-btn-text{
+  opacity:1;
+}
+.backdrop-white{
+  background:linear-gradient(0deg, rgba(0, 58, 121, 0.29), rgba(0, 58, 121, 0.29));
 }
 .video-top-left{
   @apply absolute top-0 left-0;

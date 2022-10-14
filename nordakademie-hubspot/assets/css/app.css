@@ -740,13 +740,13 @@ textarea {
   height: 10px;
   margin: 0px 5px 0;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 22px;
   position: absolute;
   top: 4px;
 }
 
-.footer-link:hover a::after {
+.footer-link a:hover:after {
   opacity: 1;
 }
 

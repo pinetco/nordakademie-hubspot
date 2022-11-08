@@ -24,19 +24,19 @@
   clip-path: polygon(100% 67%, 0% 100%, 100% 100%);
 }
 .bg-responsive-shape{
-  clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 50%,100% 15%,100% 100%,0 100%);
 }
 .h-hero{
   height: 100vh;
 }
-
 
 @media (min-width: 768px){
   .bg-secondary-shape{
     clip-path: polygon(100% 22%, 0% 100%, 100% 100%);
   }
   .h-hero{
-    height: 600px;
+    min-height: 850px;
+    height: auto;
   }
 }
 @media (min-width: 1024px){
@@ -47,13 +47,13 @@
     clip-path: polygon(100% 22%, 22% 100%, 100% 100%);
   }
   .h-hero{
-    height: 800px;
+    min-height: 1050px;
   }
 
 }
 @media(min-width: 1280px){
   .h-hero{
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -104,4 +104,14 @@
 .arrows path.a3 {
   animation-delay:0s;
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+.rounded-tl-4xl{
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+}
+
+.stream-dropdown-link.active,
+.interested-dropdown-link.active{
+  background-color:#003A79;
+  color:#ffffff;
 }

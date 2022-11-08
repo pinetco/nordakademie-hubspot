@@ -714,6 +714,34 @@ textarea {
   padding: 0 0 20px 15px;
 }
 
+@media (max-width: 576px) {
+  .accordion-question-wrapper .accordion-btn:before,
+.accordion-question-wrapper.is-active .accordion-btn:before {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.accordion .richtext ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.accordion .richtext ol {
+  padding-left: 0;
+}
+
+.accordion .richtext ol li {
+  list-style: decimal;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.accordion-answer .richtext span,
+.accordion-answer .richtext p {
+  color: #003A79 !important;
+}
+
 .dropshadow {
   transition: all 0.5s ease-in-out;
 }
@@ -1014,6 +1042,46 @@ textarea {
   background: #3CD2FF;
   color: #FFFFFF;
   background: #3CD2FF;
+}
+
+.theme-form-blue .hs-form .hs-form-field label,
+.theme-form-navy .hs-form .hs-form-field label {
+  color: #FFFFFF;
+}
+
+.theme-form-silver .hs-form .hs-form-field label {
+  color: #003A79;
+}
+
+.theme-form-blue .hs-form .legal-consent-container,
+.theme-form-navy .hs-form .legal-consent-container,
+.theme-form-blue .hs-form .hs-form-field .hs-field-desc,
+.theme-form-navy .hs-form .hs-form-field .hs-field-desc {
+  color: #FFFFFF;
+}
+
+.theme-form-silver .hs-form .legal-consent-container,
+.theme-form-silver .hs-form .hs-form-field .hs-field-desc {
+  color: #003A79;
+}
+
+.hs-form .hs-form-field .hs-field-desc {
+  font-size: 12px;
+  margin: 0px 0px 3px 0px;
+  line-height: 20px;
+}
+
+.hs-form .hs-form-booleancheckbox-display input + span:after {
+  background: #FFFFFF;
+}
+
+.theme-form-silver .hs-form .hs-form-checkbox-display input + span:after {
+  background-color: #003A79;
+  background-image: unset;
+}
+
+.hs-error-msg {
+  color: #FF0000 !important;
 }
 
 .m-top-shape-scale {
@@ -1709,6 +1777,35 @@ textarea {
   bottom: -46px;
 }
 
+.study-card .slick-arrow.slick-next:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/right-arrow-svg.svg);
+}
+
+.study-card .slick-arrow.slick-prev:before {
+  background-image: url(https://8530121.fs1.hubspotusercontent-na1.net/hubfs/8530121/left-arrow-svg.svg);
+}
+
+.study-card .slick-arrow.slick-next {
+  right: 20px;
+}
+
+.study-card .slick-arrow.slick-prev {
+  left: 20px;
+}
+
+.link-btn .right-arrow {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.link-btn:hover .right-arrow {
+  opacity: 1;
+}
+
+.study-card .btn-white a:hover {
+  border-color: #ffffff !important;
+}
+
 .bg_overlay {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 58, 121, 0) 0%, rgba(0, 58, 121, 0.7) 100%);
@@ -2023,8 +2120,8 @@ textarea {
 }
 
 .bg-responsive-shape {
-  -webkit-clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 31%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 50%, 100% 15%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 50%, 100% 15%, 100% 100%, 0 100%);
 }
 
 .h-hero {
@@ -2038,7 +2135,8 @@ textarea {
   }
 
   .h-hero {
-    height: 600px;
+    min-height: 850px;
+    height: auto;
   }
 }
 
@@ -2054,13 +2152,13 @@ textarea {
   }
 
   .h-hero {
-    height: 800px;
+    min-height: 1050px;
   }
 }
 
 @media (min-width: 1280px) {
   .h-hero {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -2133,6 +2231,17 @@ textarea {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */
+}
+
+.rounded-tl-4xl {
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+}
+
+.stream-dropdown-link.active,
+.interested-dropdown-link.active {
+  background-color: #003A79;
+  color: #ffffff;
 }
 
 .shape-scale-l-desk {
@@ -2236,4 +2345,46 @@ select {
   height: 4px;
   border-radius: 100%;
   background: #003A79;
+}
+
+.hero-subpage-top-traingle {
+  width: 91.63%;
+}
+
+@media (min-width: 1023px) {
+  .hero-subpage-top-traingle {
+    width: 83.3%;
+  }
+}
+
+.study-card .slick-arrow.slick-next {
+  right: 20px;
+}
+
+.study-card .slick-arrow.slick-prev {
+  left: 20px;
+}
+
+.link-btn .right-arrow {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.link-btn:hover .right-arrow {
+  opacity: 1;
+}
+
+.study-card .btn-white a:hover {
+  border-color: #ffffff !important;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+}
+
+h1 {
+  white-space: nowrap;
+  align-self: center;
 }

@@ -27,3 +27,26 @@
 .accordion-answer .richtext img{
   padding:0 0 20px 15px;
 }
+@media(max-width: 576px){
+  .accordion-question-wrapper .accordion-btn:before,
+  .accordion-question-wrapper.is-active .accordion-btn:before {
+    height: 20px;
+    width: 20px;
+  }
+}
+.accordion .richtext ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+.accordion .richtext ol {
+  padding-left:0;
+}
+.accordion .richtext ol li {
+  list-style: decimal;
+  list-style-position: inside;
+  padding-left:0;
+}
+.accordion-answer .richtext span,
+.accordion-answer .richtext p{
+  color: #003A79 !important;
+}

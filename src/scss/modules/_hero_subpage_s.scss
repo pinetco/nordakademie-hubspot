@@ -1,0 +1,8 @@
+.hero-subpage-top-traingle{
+  width: calc(8.33% * 11)
+}
+@media(min-width: 1023px){
+  .hero-subpage-top-traingle{
+    width: calc(8.33% * 10)
+  }
+}

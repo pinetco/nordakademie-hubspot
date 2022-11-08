@@ -209,8 +209,9 @@ $('.tab-link').click(function () {
 /* Tab to Accordion Logic */
 $(".tab-link").click(function () {
     var index = $(this).index();
-    var previousActive = $(".main-tab-content").find(".active");
-    var currentActive = $(".main-tab-content").find(".tab").eq(index);
+    var parent = $(this).parents(".tab-to-accordion");
+    var previousActive = parent.find(".main-tab-content").find(".active");
+    var currentActive = parent.find(".main-tab-content").find(".tab").eq(index);
     previousActive.fadeOut(300, function () {
         previousActive.removeClass("active");
         currentActive.fadeIn(300, function () {
@@ -440,3 +441,56 @@ $('.filter-list a').click(function() {
     $(this).find('svg').toggleClass('arrow-down');
 })
 
+// Hero home carousel dropdown
+$("#stream-dropdown").click(function(){
+    $(".stream-dropdown-menu").slideToggle();
+    $(".interested-dropdown-menu").slideUp();
+});
+
+$("#interested-dropdown").click(function(){
+    $(".interested-dropdown-menu").slideToggle();
+    $(".stream-dropdown-menu").slideUp();
+});
+
+$(".stream-dropdown-link").click(function(){
+    $(".stream-selection-notice").addClass("hidden");
+    var groupIndex = $(this).data("stream-group");
+    var label = $(this).text();
+    $("#stream-dropdown").text(label);
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    $(".interested-dropdown-link").addClass("hidden");
+    $(".interested-dropdown-menu").find("[data-interested-group='" + groupIndex + "']").removeClass("hidden");
+    $(".stream-dropdown-menu").slideToggle();
+    $("#interested-dropdown").text($("#interested-dropdown").attr("interested-placeholder"));
+});
+
+$(".interested-dropdown-link").click(function(){
+    $(".interested-dropdown-menu").slideToggle();
+    var label = $(this).text();
+    $("#interested-dropdown").text(label);
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    var redirectUrl = $(this).data("redirect-url");
+    $("#interested-course-button").attr("href", redirectUrl);
+});
+
+//Sliding Text
+function Marquee(selector, speed) {
+    const parentSelector = document.querySelector(selector);
+    const clone = parentSelector.innerHTML;
+    const firstElement = parentSelector.children[0];
+    let i = 0;
+
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+    parentSelector.insertAdjacentHTML('beforeend', clone);
+
+    setInterval(function () {
+        firstElement.style.marginLeft = `-${i}px`;
+        if (i > firstElement.clientWidth) {
+            i = 0;
+        }
+        i = i + speed;
+    }, 0);
+}
+window.addEventListener('load', Marquee('.marquee', .4))

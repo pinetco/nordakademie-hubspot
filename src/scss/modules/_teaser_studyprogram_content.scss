@@ -1,0 +1,16 @@
+.study-card .slick-arrow.slick-next {
+  right: 20px;
+}
+.study-card .slick-arrow.slick-prev {
+  left: 20px;
+}
+.link-btn .right-arrow{
+  opacity:0;
+  transition: opacity 0.5s ease-in-out;
+}
+.link-btn:hover .right-arrow{
+  opacity:1;
+}
+.study-card .btn-white a:hover {
+  border-color: #ffffff!important;
+}

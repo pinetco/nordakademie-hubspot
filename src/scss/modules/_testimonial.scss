@@ -1,0 +1,9 @@
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+}
+h1 {
+  white-space: nowrap;
+  align-self: center;
+}
